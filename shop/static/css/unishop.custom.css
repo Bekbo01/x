@@ -1,0 +1,261 @@
+.wrapper-inner .container h1,.wrapper-inner .content.content-block h1 {text-align: center;letter-spacing: 1px;line-height: 1.2;position: relative;padding-bottom: 15px;margin-bottom: 30px;}.wrapper-inner .container h1 {font-weight: 700;font-size: 24px;}.wrapper-inner .container h1:after,.wrapper-inner .content.content-block h1:after {content: '';display: block;position: absolute;height: 4px;width: 80px;background-color: #0b6ee9;left: 0;bottom: 0;right: 0;margin: auto;}.h1fs24 h1 {font-size: 24px;}.h1wh h1 {font-family: sans-serif;font-size: 30px;line-height: 1.5em;font-weight: bold;text-align: center;color: white}.product_print + h1 {margin: 0 100px 10px 0;}@media (max-width: 1024px) {.product_print + h1 {margin-right: 0;}}.wrapper-inner .content.content-block .velosipedi-na-komissii h1 {padding: 40px 10px;color: white;font-size: 28px;margin: 0;background-color: #19519E;text-align: center;font-style: italic;}.wrapper-inner .content.content-block .velosipedi-na-komissii h1:after {display: none;}@media (max-width: 640px) {.wrapper-inner .content.content-block .velosipedi-na-komissii h1 {font-size: 20px !important;padding: 20px 10px;}}
+.header_address{width:18%!important;text-align:left!important;}
+.header_writeback{width:15%;border-radius:10px;margin:0 1% 0 1%;display:inline-block;vertical-align:top;text-align:center;border:1px solid #0b6ee9;}
+.header_writeback span{border:none!important;color:#0b6ee9;}
+.tblprice{border-collapse:collapse;text-align:center;}
+.tblprice tr td{text-align:center;border:none;}
+.tblprice .f2{font-size:18px;font-weight:bold;}
+.tblprice .brd2{border:2px solid #000;}
+.tblprice .brd3{border:2px solid #000;border-right:1px solid #000}
+.tblprice .brd{border:1px solid #000;}
+.tblprice .brd4{border:1px solid #000;border-bottom:2px solid #000}
+.tblprice .brdr2{border-right:2px solid #000;}
+.tblprice .bg1{background-color:#ff9e9e;}
+.tblprice .brdr1{border-right:1px solid #000;}
+.tblprice .brdl1{border-left:1px solid #000;}
+.tblprice .nobrd{border:0!important}
+.col-md-12{width:100% !important;}
+.height330 {height:330px;}
+.col-md-10{width:80%;!important;float:left;}
+.col-md-9{width:75%;!important;float:left;}
+.col-md-8{width:60%;!important;float:left;}
+.col-md-6{width:50% !important;float:left;}
+.col-md-4{width:33.3% !important;float:left;}
+.col-md-3{width:25% !important;float:left;}
+.col-md-2{width:20% !important;float:left;}
+.padding-left-30 {padding-left:30%;}
+.padding-left-25 {padding-left:25%;}
+.padding-right-30 {padding-right:30%;}
+.padding-right-25 {padding-right:25%;}
+.img-responsive{float:left;}
+.fright{float:right;}
+.fleft{float:left;margin-left:15px;margin-right:15px;}
+.pre p{font-size:25px;line-height:30px;padding:30px 20px;}
+.img-border{width:95%;}
+.fancytext{color:rgb(255, 255, 0);text-shadow:0 -3px 0 #000000, 0 -3px 0 #000000, 0 3px 0 #000000, 0 3px 0 #000000, -3px 0 0 #000000, 3px 0 0 #000000, -3px 0 0 #000000, 3px 0 0 #000000, -1px -3px 0 #000000, 1px -3px 0 #000000, -1px 3px 0 #000000, 1px 3px 0 #000000, -3px -1px 0 #000000, 3px -1px 0 #000000, -3px 1px 0 #000000, 3px 1px 0 #000000, -2px -3px 0 #000000, 2px -3px 0 #000000, -2px 3px 0 #000000, 2px 3px 0 #000000, -3px -2px 0 #000000, 3px -2px 0 #000000, -3px 2px 0 #000000, 3px 2px 0 #000000, -3px -3px 0 #000000, 3px -3px 0 #000000, -3px 3px 0 #000000, 3px 3px 0 #000000, -3px -3px 0 #000000, 3px -3px 0 #000000, -3px 3px 0 #000000, 3px 3px 0 #000000;border-bottom:rgb(0, 0, 0);}
+.fancyblock{display:inline-block;position:relative;}
+.fancyblock .example_text{display:block;position:absolute;left:0;bottom:0;width:100%;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding:10px;text-align:center;}
+.fancyblock h6{font-family:Arial, Helvetica, sans-serif;font-size:18px;color:rgb(255, 255, 0);line-height:20px;text-shadow:0 -3px 0 #000000, 0 -3px 0 #000000, 0 3px 0 #000000, 0 3px 0 #000000, -3px 0 0 #000000, 3px 0 0 #000000, -3px 0 0 #000000, 3px 0 0 #000000, -1px -3px 0 #000000, 1px -3px 0 #000000, -1px 3px 0 #000000, 1px 3px 0 #000000, -3px -1px 0 #000000, 3px -1px 0 #000000, -3px 1px 0 #000000, 3px 1px 0 #000000, -2px -3px 0 #000000, 2px -3px 0 #000000, -2px 3px 0 #000000, 2px 3px 0 #000000, -3px -2px 0 #000000, 3px -2px 0 #000000, -3px 2px 0 #000000, 3px 2px 0 #000000, -3px -3px 0 #000000, 3px -3px 0 #000000, -3px 3px 0 #000000, 3px 3px 0 #000000, -3px -3px 0 #000000, 3px -3px 0 #000000, -3px 3px 0 #000000, 3px 3px 0 #000000;border-bottom:rgb(0, 0, 0);}
+.fancyblock span{font-size:12px;}
+.block2{background:url(/img/2.jpg) no-repeat scroll 0 0 #fff;height:310px;margin:0 auto;}
+.block2 div:first-child{margin-left:-7px;margin-right:7px;}
+.block2-1{display:block;width:25%;margin:0;height:190px;position:relative;float:left;text-align:center;padding-top:90px;font-size:36px;font-family:Arial;color:#FFFFFF;line-height:1em;margin-bottom:10px;}
+.block2-1 p{font-style:italic;line-height:39px !important;padding:0px;margin:0px;}
+.block2-2{display:block;width:25%;margin-top:20px;position:relative;float:left;text-align:center;font-size:16px;font-family:Arial,Tahoma;color:#000000;line-height:1em;}
+.title{overflow:hidden;text-align:center;font-size:26px;}
+.title span{display:inline-block;vertical-align:middle;}
+.title:before,
+.title:after{content:"";display:inline-block;vertical-align:middle;width:100%;height:4px;background-color:#3e3e3e;position:relative;}
+.title:before{margin-left:-100%;left:-14px;}
+.title:after{margin-right:-100%;right:-14px;}
+.newtable{width:100%;border:0px;border-collapse:collapse;}
+.newtable thead{font-weight:bold;}
+.newtable td{padding:0.6rem 1rem;border-bottom:1px solid #e8e9eb;}
+@media screen and (max-width:800px){table.newtable thead{display:none;}
+table.newtable tr{display:block;margin-bottom:1rem;border-bottom:2px solid #e8e9eb;}
+table.newtable td{display:block;text-align:right;}
+table.newtable td:before{content:attr(aria-label);float:left;font-weight:bold;}
+}
+.remont-velosipedov textarea{height:37px;overflow:hidden;resize:none;}
+.check a:hover{background:rgb(255, 255, 0);color:rgb(255, 255, 0);}
+.pinky2-bike{border:none;background-image:linear-gradient(rgb(255,227,142), rgb(255,191,0));font-family:sans-serif;margin:0 auto;box-shadow:0 10px 10px rgba(122,122,122,0.5);border-radius:5px;padding-bottom:15px;text-align:center;font-size:24px;font-weight:500;}
+.pinky2-bike a:hover{color:#000;}
+.pinky2-bike:hover{background-image:linear-gradient(rgb(253,176,207), rgb(249,71,142));}
+@media (max-width:767px){.newfooter div{width:75% !important;}
+.newfooter .col-md-8{display:inline-block;}
+}
+.multiform-gap-name{width:100px;}
+.multiform-wrap .multiform-gap-value{margin-left:10px;}
+.default-theme .multiform-submit input[type="submit"]{padding:0;}
+#wahtmlcontrol_fields_field_1, #wahtmlcontrol_fields_field_13, #wahtmlcontrol_fields_field_15, #wahtmlcontrol_fields_field_47, #wahtmlcontrol_fields_field_49{height:25px;}
+.multiform-theme1 .multiform-submit input[type="submit"]{width:100%;}
+.multiform-theme1 .multiform-gap-value input[type="text"], .multiform-theme1 .multiform-gap-value textarea, .multiform-theme1 .multiform-gap-value input[type="email"], .multiform-theme1 .multiform-gap-value select, .multiform-theme1 .multiform-gap-value .multiform-formula span, .multiform-theme1 .multiform-gap-value input[type="tel"]{height:25px;}
+.subscribe{width:50%;}
+@media (max-width:767px){.prokat_snoubordov .clearfixmob{height:290px !important;}
+.prokat_snoubordov .clearfixmob1{height:350px !important;}
+.prokat_snoubordov .mobile{width:90% !important;}
+.prokat_snoubordov .mobcenter{text-align:center !important;}
+}
+.multiform-form-description p{margin:0;}
+@media screen and (max-width:640px){table{overflow-x:auto;display:block;}
+.mobhide{display:none;}
+.multiform-theme6 .multiform-title{font-size:14px !important;}
+.mobilefont_top{font-size:20px !important;}
+.mobilefont_homeservis{font-size:14px !important;padding:30% 9% 24% 9% !important;}
+.mobcallback table td{padding:0;}
+.mobilefont_callback{font-size:18px !important;}
+.mobile_full{width:100% !important;}
+.mobile_half{width:50% !important;}
+.mob_right{float:right !important;}
+.mobilefont_callback p{font-size:8px !important;}
+.mobilefont_top p{font-size:10px !important;}
+.mobfull{width:100% !important;}
+.mobheight{width:100% !important;}
+.mobheight1{width:100% !important;}
+.padding-left-30 {padding-left:0;}
+.height330 {height:auto;}
+.padding-left-25 {padding-left:0;}
+.padding-left-12 {padding-left:0 !important;}
+.padding-right-30 {padding-right:0;}
+.padding-right-25 {padding-right:0;}
+.mobheight_top{height:450px !important;}
+.multiform-body{padding:5px 0;}
+.mobilefont h6{font-size:10px !important;line-height:1.2 !important;}
+.multiform-title{padding:5px;}
+.multiform-gap-fields{padding:0 10px 0 10px;}
+.multiform-form-description{padding:0 10px 0 10px;}
+.multiform-theme1 .multiform-gap-field{padding:5px 0 5px 0;}
+.height-250 {height:125px !important;width: 50% !important;min-width: 50%;border:2px solid #fff}
+.mob-padding-0 {padding:0 !important;}
+}
+.multiform-theme4 .multiform-gap-fields{width:70%;float:left;}
+.video{height:0;position:relative;padding-bottom:44.25%;}
+.video iframe{position:absolute;left:0;top:0;width:100%;height:100%;}
+.fancybox img{margin-bottom:10px;}
+.remont-snoubordov .contact-page__form{padding:0 10px 0 10px;}
+.velosipedi-na-komissii .contact-page__form{padding:0 10px 0 10px;}
+.pinky-bike5{border:2px #f00 solid;font-family:sans-serif;margin:0 auto;box-shadow:0 10px 10px rgba(122,122,122,0.5);border-radius:5px;font-size:22px;text-align:center;line-height:30px;padding-top:15px;color:#fff;background-image:linear-gradient(rgb(140,140,140),rgb(80,80,80));}
+.pinky-bike5:hover{background:rgb(25,137,39);border:2px #000 solid;color:#fff;}
+.velokom{background:rgba(0,0,0,0.7);}
+.velokom:hover{background:rgb(25,137,39);border:2px #000 solid;color:#fff;}
+.servis-background{background:#ede9ea;}
+.competitors tr:first-child td:nth-child(4){border-left:3px solid red!important;border-right:3px solid red!important;}
+.velokom a{text-decoration:none;}
+.pinky2-bike a{text-decoration:none;}
+.pinky5-bike a{text-decoration:none;}
+.soldorbuy{float:left;text-align:left;margin-left:13%;}
+.multiform-form-description{padding:0px;}
+.multiform-theme6 .multiform-submit input[type="submit"]{padding:2px 12% 2px 12%;}
+.gray img{-webkit-filter:grayscale(1);filter:gray;filter:grayscale(1);}
+.gray a{pointer-events:none;cursor:default;color:#888;}
+.height-250 {    
+    display: block;
+    margin-bottom: 15px;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    border-radius: 5px;
+    height: 255px;
+    width: 100%;
+    position: relative;
+}
+.buy1click-button {
+    border-radius: 100px;
+}
+.js-category-text-wrap.close {
+    visibility: hidden;
+}
+
+.header_address-text i {
+    margin-left: 15px;
+}
+@media screen and (max-width: 640px){
+.gri {     display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+.gri .mobile_half {
+    width: 100% !important;
+}
+.clicktrack.header_phone.bs-color.zphone {
+    width: 100%;
+}
+.header_address-text i {
+    margin-left: 0px;
+}
+
+}
+.clicktrack_show {
+    display: inline-block;
+    margin-left: 5px;
+}
+#window .crm-form-block{margin: 0 auto;}
+.modal-crm-form{background: rgba(102,102,102,.8)!important;width: 100%;height: 100%;position: fixed;top: 0;left: 0;z-index: 10;overflow-y: scroll;}
+.modal-crm-form .modal-content{max-width: 500px;margin: 50px auto;background: white;border-radius: 5px;}
+@media (min-width: 720px){
+    .modal-crm-form .modal-content{max-width: 500px;}
+}
+@media (max-width: 576px){
+    .modal-crm-form .modal-content{max-width: 350px;}
+    .modal-crm-form .crm-form-block{width: 300px!important;}
+}
+.modal-crm-form .modal-content .modal-header{width: 100%; height: 50px;text-align: right;}
+.modal-crm-form .crm-form-block{background: white;position: relative;margin: auto;border-radius: 5px;padding: 15px;}
+.modal-crm-form .close-btn {font-size: 20px;text-decoration: none;width: 30px;height: 30px;line-height: 27px;text-align: center;border-radius: 50%;border: 1px solid #e2e2e2;color: #000;text-indent: 1px;margin: 15px;display: inline-block;cursor: pointer;}
+.modal-crm-form .crm-after-submit-block{color:#4d4d4d!important;}
+.modal-crm-form .crm-form-block p{margin:0;}
+.modal-crm-form .crm-form-block iframe{display:none;}
+.modal-crm-form .crm-form-block .crm-form-fields-block{margin:0;}
+.modal-crm-form .crm-form-block .crm-form-fields-block .crm-form-fields{margin:0;}
+.modal-crm-form .crm-form-block .crm-form-field{margin-bottom: 5px;}
+.modal-crm-form .crm-form-block .crm-form-fields-block .crm-form-fields .crm-form-field.crm-caption-style-none .crm-form-field-line.crm-form-field-2st-line .crm-input-col{width:100%;}
+.modal-crm-form input,.modal-crm-form select {padding: 0 10px;width: 100%;box-sizing: border-box;border-radius: 10px;outline: 0;display: inline-block;height: 37px;line-height: 37px;border: 1px solid #d1d1d1;margin:0;}
+.modal-crm-form select:after{}
+.modal-crm-form .jq-selectbox{padding: 0 10px;border: 1px solid #d1d1d1;}
+.modal-crm-form .jq-selectbox__trigger-arrow {border-top: 5px solid orange;border-right: 5px solid transparent;border-left: 5px solid transparent;margin: -2px 0 0;}
+.modal-crm-form .jq-selectbox__dropdown,.modal-crm-form .select-list__items {left: 0;min-width: 100%;overflow: hidden;margin: 2px 0 0;box-shadow: 0 1px 1px rgba(0,0,0,.2);border-radius: 5px;background: #fff;z-index: 11;border: 1px solid orange;}
+.modal-crm-form .jq-selectbox__dropdown ul {list-style: none;margin: 0;padding: 0 10px;color: #000;white-space: nowrap;}
+.modal-crm-form .jq-checkbox,.modal-crm-form .jq-radio {width: 13px;height: 13px;border: 1px solid #d6d1d1;background: #fff;vertical-align: middle;margin: 0 8px 1px 0;cursor: pointer;border-radius: 2px;}
+.modal-crm-form .crm-submit-button-wrapper input{height: 47px;}
+.modal-crm-form .crm-after-submit-block{margin:0;color: white;height: 100% !important;}
+.modal-crm-form .crm-form-submit-button{background-color: #0b6ee9;border: 1px solid #0b6ee9;color: #fff;font-size: 14px;font-weight: 600;padding-left: 15px;padding-right: 15px;}
+.modal-crm-form .crm-form-field[data-id="stranitsa_otpravki_formy"]{display: none;}
+.modal-crm-form .crm-form-block .crm-form-field:first-child .crm-form-field-col p span{color: #fff;text-transform: uppercase;font-size: 24px;font-weight: 700;text-align: center;line-height: 1;margin-bottom: 15px;text-align: center;}
+.modal-backdrop {position: fixed;top: 0;left: 0;z-index: 10;width: 100vw;height: 100vh;background-color: white;}
+.modal-backdrop.fade {opacity: 0;}
+.modal-backdrop.show {opacity: 0.5;}
+.hidden{display: none!important;}
+.kss_checkbox2.disabled{opacity: 0.5;}
+.kss_form4 .member .member-title{font-weight: bold;text-decoration: underline;padding-bottom: 15px;}
+.kss_form4 .member.border-bottom{box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);margin-bottom: 15px;}
+.pickmeup.study .pmu-instance .pmu-button.disabled{cursor: not-allowed; opacity: 0.3;}
+.pickmeup.study .pmu-instance .pmu-button.pmu-not-in-month{opacity: 0;}
+.kss_form4 .kss_datetime .time-selector .ks-select__item.disabled{cursor: not-allowed; opacity: 0.3;}
+.kss_form4 .kss_datetime .time-selector.disabled{cursor: not-allowed; opacity: 0.3;}
+.kss_form4 .result-window{color: green; text-align: center; display: block;}
+.modal-crm-form .close-btn2 {font-size: 20px;text-decoration: none;width: 30px;height: 30px;line-height: 27px;text-align: center;border-radius: 50%;border: 1px solid #e2e2e2;color: #000;text-indent: 1px;margin: 15px;display: inline-block;cursor: pointer;}
+@media (max-width: 600px){
+    .header-nav-search_form{border: 1px solid #272728;}
+}
+#js-order-page .quickorder-cart-wrapper{padding: 10px;}
+#js-order-page .quickorder-cart-wrapper .buy1click-button{border-radius: 10px;}
+#js-order-page select,#js-order-page input, #js-order-page textarea {border-radius: 3px;height: 34px;}
+
+
+.related-slider{
+    padding: 0 30px;
+    margin: 0 15px;
+}
+.related-slider .slick-arrow{
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #adb5bd;
+    background-image: url(img/icons1.png);
+    background-position: -310px 0;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1;
+}
+.related-slider .slick-prev {
+    left: 0;
+}
+.related-slider .slick-next {
+    right: 0;
+    transform: rotate(180deg);
+}
+.related-slider .slick-slide .product-tile{
+    border-left: 1px solid #ebebeb;
+}
+.related-slider .slick-slide{
+    margin:0 15px;
+}
+.filter-item.closed .filter-item_title::after{
+    content: "\f107";
+}
+.crm-form-field[data-id="form_callback_id"]{display:none;}
+.crm-form-field[data-id="what_in_cart"]{display:none;}
+

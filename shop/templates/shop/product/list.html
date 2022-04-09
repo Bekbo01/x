@@ -1,0 +1,250 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}
+{% if category %}{{ category.name }}{% else %}Products{% endif %}
+{% endblock %}
+{% block content %}
+
+
+
+<link href="{% static "img/bootstrap.min.css" %}" rel="stylesheet">
+<link href="{% static "img/jquery.fancybox.min.css" %}" rel="stylesheet">
+<link href="{% static "img/lightgallery.css" %}" rel="stylesheet">
+<link href="{% static "img/preloader.css" %}" rel="stylesheet">
+<link href="{% static "img/style2.css" %}" rel="stylesheet">
+<main id="main-content">
+    <div itemscope="" itemtype="http://schema.org/Product">
+        <meta itemprop="availability" content="InStock">
+        <meta itemprop="brand" content="Велосипеды в Нур-Султане (Астане)">
+        <div style="display: none" itemtype="http://schema.org/AggregateOffer" itemscope="" itemprop="offers">
+          <meta content="974" itemprop="offerCount">
+          <meta content="2214000" itemprop="highPrice">
+          <meta content="0" itemprop="lowPrice">
+          <meta content="KZT" itemprop="priceCurrency">
+        </div>
+        <section class="main-container inner container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="main-heading inner">Велосипеды в Нур-Султане (Астане)</h1>
+            </div>
+            <div class="col-xs-12 col-lg-9">
+              <div class="product-filter">
+                <div class="row">
+                  
+                  <div class="col-xs-6">
+                    <div class="dropper sorter"><span>Сортировать:</span><i class="fa fa-angle-down"></i>
+                      <ul class="drop-list">
+                        <li><span class="active" onclick="sortCat(&#39;default&#39;);">По умолчанию</span></li>
+                        <li><span onclick="sortCat(&#39;price-down&#39;);">Цена: По убыванию</span></li>
+                        <li><span onclick="sortCat(&#39;price-up&#39;);">Цена: По возрастанию</span></li>
+                        <li><span onclick="sortCat(&#39;name-down&#39;);">Наименование: Я-А</span></li>
+                        <li><span onclick="sortCat(&#39;name-up&#39;);">Наименование: А-Я</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row div_to_load_products">
+                {% for product in products %}
+                <div class="product_card col-md-4 col-sm-6 col-xs-6">
+                  <div class="product-col">
+                    <div id="product-7883" class="product-info-floater">
+                      <div class="left-part">
+                        {% if product.available %}
+                        <div class="ware-badge on-ware">
+                            <i class="fa fa-check"></i> Есть в наличии
+                        </div>
+                        {% else %}
+                        <div class="ware-badge not-on-ware">
+                            <i class="fa fa-remove"></i> Нет в наличии
+                        </div>
+                        {% endif %}
+                      </div>
+                      <div class="right-part"> <a class="difference"> <span
+                            data-diff="{{ product.sku }}"></span> </a> </div>
+                      <div class="colors-block"><span class="imagecheck-holder"> <img
+                            src="{% static "img/3.jpg" %}"
+                            class="imagecheck"> </span><span class="imagecheck-holder active_one"> <img
+                            src="{% static "img/3400.jpg" %}"
+                            class="imagecheck"> </span></div>
+                    </div>
+                    <div class="image" itemscope="" itemtype="http://schema.org/ImageObject"> <a
+                        href="{{ product.get_absolute_url }}"
+                        title="{{ product.name }}"> <span class="product-more">Подробнее</span><img
+                          class="normal_view"
+                          src="{% if product.image %}{{ product.image.url }}{% else %}{% static " img/no_image.png" %}{% endif %}"
+                          alt="{{ product.name }}" loading="lazy" itemprop="contentUrl"><img class="hover_view"
+                          src="{% if product.image %}{{ product.image.url }}{% else %}{% static " img/no_image.png" %}{% endif %}"
+                          alt="{{ product.name }}" loading="lazy"></a>
+                      <meta itemprop="name" content="{{ product.name }}">
+                      <meta itemprop="author" content="Hube.Kz">
+                      <meta itemprop="description" content="">
+                    </div>
+                    <div class="rate_holder"> 
+                        <span class="star_rating"> 
+                            <i class="fa fa-star filled-star"></i>
+                            <i class="fa fa-star filled-star"></i>
+                            <i class="fa fa-star filled-star"></i>
+                            <i class="fa fa-star filled-star"></i>
+                            <i class="fa fa-star-o unfilled-star"></i>
+                        </span>
+                        <span>{{ product.star }}</span><span class="hidden"></span> 
+                    </div>
+                    <div class="short-card-desc"></div> <a class="product-title"
+                      href="{{ product.get_absolute_url }}"
+                      title="{{ product.name }}"> <span>{{ product.name }}</span> </a>
+                    <div class="space-filler"></div>
+                    <div class="price-and-button">
+                      <div class="price"> <span class="pr_info">
+                          <!--Цена за шт-->
+                        </span> <span id="the_price-7883">{{ product.price }}</span> тг</div>
+                      <div>
+                        <div class="amount_controller">
+                          <div class="dynamic_price">
+                              <span class="the_price_d" data-product="{{ product.sku }}">{{ product.price }}</span> тг</div> 
+                              <a class="amount_controller_btn">
+                                <img src="{% static "img/minus_btn.png" %}"></a>
+                          <input type="number" name="quantity" min="1" max="1" value="1" size="2" id="add_to_cart_input-7883" class="add_to_cart_input" > 
+                          <a>
+                            <img src="{% static "img/plus_btn.png" %}"></a>
+                        </div> 
+                        
+                        <form action="{% url "cart:cart_add" product.id %}" method="post">
+                            {% csrf_token %}
+                            {{ cart_product_form }}
+                            <button type="submit" class="btn btn-cart" >
+                                В корзину 
+                            </button>
+                        </form>
+                      </div>
+                    </div>
+                    <br>
+                    <div>
+                      <div class="credit-row grid_credit credit-kaspi">
+                        <div class="ks-widget" 
+                        data-template="flatButton" 
+                        data-merchant-sku="{{ product.sku }}"
+                        data-merchant-code="9818048"
+                        data-city="710000000" 
+                        data-style="desktop" 
+                        id="ks-l1elsifl">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-relative">
+                      <div class="card-bottom-block">
+                        <div class="specs-row">
+                            <div><span>Производитель:</span> {{ product.producer }}</div>
+                            <div><span>возрастная группа :</span> {{ product.age_group }} <small></small></div>
+                            <div><span>размер рамы:</span> {{ product.razmer }} </div>
+                            <div><span>цвет:</span> {{ product.color }} <small></small></div>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+              <div class="wrapper-cat-faqs">
+                <h2 class="faqs-title">Часто задаваемые вопросы про Велосипеды в Нур-Султане (Астане)</h2>
+                <div class="faqs" itemscope="" itemtype="https://schema.org/FAQPage">
+                  <div id="faq-223" class="faq" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" itemprop="name">Вы продаете велосипеды без скоростей?</div>
+                    <div class="faq-answer" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <div itemprop="text">Да, вы можете выбрать велосипеды без скоростей среди <a
+                          href="/gorodskie">городских</a>.</div>
+                    </div>
+                  </div>
+                  <div id="faq-11" class="faq" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" itemprop="name">Какие модели велосипедов самые популярные?</div>
+                    <div class="faq-answer" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <div itemprop="text">ВЕЛОСИПЕД FORWARD SPORTING 2.0 DISC 2020<br>TRINX K016 2020<br>ВЕЛОСИПЕД ALTAIR
+                        CITY 28 HIGH 2020<br>STELS Navigator-325 28 Z010</div>
+                    </div>
+                  </div>
+                  <div id="faq-10" class="faq" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" itemprop="name">Какие цены на велосипеды в Нур-Султане (Астане)?</div>
+                    <div class="faq-answer" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <div itemprop="text">Стоимость велосипедов в&nbsp;Нур-Султане (Астане) начинается от&nbsp;16500 тенге
+                      </div>
+                    </div>
+                  </div>
+                  <div id="faq-9" class="faq" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" itemprop="name">Какие бренды велосипедов самые популярные?</div>
+                    <div class="faq-answer" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                      <div itemprop="text">
+                        <ul>
+                          <li><a href="/forward">FORWARD</a></li>
+                          <li><a title="Продажа велосипедов STELS (Стелс)" href="/stels">STELS
+                              (Стелс)</a></li>
+                          <li><a title="Продажа велосипедов Trinx" href="/trinx">TRINX</a></li>
+                          <li><a title="Продажа велосипедов Альтаир" href="/altair">ALTAIR</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+</main>
+<script>
+(function(d, s, id) {
+    var js, kjs;
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://kaspi.kz/kaspibutton/widget/ks-wi_ext.js';
+    kjs = document.getElementsByTagName(s)[0]
+    kjs.parentNode.insertBefore(js, kjs);
+}(document, 'script', 'KS-Widget'));
+</script>
+
+<script
+  src="{% static "scripts/jquery-2.2.1.min.js" %}"></script>
+<script
+  src="{% static "scripts/owl.carousel.js" %}"></script>
+<script
+  src="{% static "scripts/bootstrap.min.js" %}"></script>
+<script
+  src="{% static "scripts/jquery.fancybox.min.js" %}"></script>
+<script
+  src="{% static "scripts/lightgallery.js" %}"></script>
+<script
+  src="{% static "scripts/lg-fullscreen.js" %} "></script>
+<script
+  src="{% static "scripts/lg-thumbnail.js" %} "></script>
+<script
+  src="{% static "scripts/lg-video.js" %} "></script>
+<script
+  src="{% static "scripts/lg-autoplay.js" %} "></script>
+<script
+  src="{% static "scripts/lg-zoom.js" %} "></script>
+<script
+  src="{% static "scripts/lg-hash.js" %} "></script>
+<script
+  src="{% static "scripts/mask.js" %}"></script>
+<script
+  src="{% static "scripts/lg-pager.js" %} "></script>
+<script
+  src="{% static "scripts/jquery.lazy.min.js" %}"></script>
+<script
+  src="{% static "scripts/js.cookie.min.js" %}"></script>
+<script
+  src="{% static "scripts/scripts.js" %}"></script>
+
+  <script type="text/javascript" async=""
+  src="{% static "scripts/media.js" %}"></script>
+<script type="text/javascript" async=""
+  src="{% static "scripts/analytics.js" %} "></script>
+<script type="text/javascript" async="" id="topmailru-code" src="https://top-fwz1.mail.ru/js/code.js"></script>
+<script type="text/javascript" async=""
+  src="{% static "scripts/top100.js" %}"></script>
+<script async=""
+  src="{% static "scripts/fbevents.js" %}"></script>
+<script async=""
+  src="{% static "scripts/tag.js" %}"></script>
+<script>window.dataLayer = window.dataLayer || [];</script>
+{% endblock %}

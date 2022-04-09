@@ -1,0 +1,15 @@
+celery
+Django==2.2.20
+django-celery
+django-haystack==2.8.1
+django-parler==1.9.2
+django-phonenumber-field==6.1.0
+django-redis-cache==2.1.0
+django-rosetta==0.9.3
+django-storages==1.9.1
+django-taggit==1.2.0
+Pillow==8.1.1
+redis==2.10.6
+phonenumbers==8.12.46
+whitenoise
+dj-database-url

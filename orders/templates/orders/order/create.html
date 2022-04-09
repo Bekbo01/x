@@ -1,0 +1,108 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}
+    Checkout
+{% endblock %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static "img/jquery.fancybox.min.css" %}">
+    <link href="{% static "img/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "img/jquery.fancybox.min.css" %}" rel="stylesheet">
+    <link href="{% static "img/lightgallery.css" %}" rel="stylesheet">
+    <link href="{% static "img/preloader.css" %}" rel="stylesheet">
+    <link href="{% static "img/style2.css" %}" rel="stylesheet">
+    
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="main-heading "> Оформление заказа </h1>
+            <div id="cart-actions-holder" class="col-md-12 no-padding">
+                </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                            <form method="post" class="order-form">
+                                <div class="form-cart-head"> Заполните Ваши контактные данные </div>
+                                <div class="white-back-block no-back-no-padding">
+                                    {% for field, error in form.errors.items %} 
+                                        <div class="alert alert-danger">
+                                            <strong>{{ error }}</strong>
+                                        </div>
+                                    {% endfor %}
+                                    <div class="row">
+                                        <div class="col-md-12"> 
+                                            <label class="ui_label_group">
+                                                {{ form.first_name }}
+                                            <span class="ui_label">Укажите Ваши ФИО</span> 
+                                            </label> 
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12"> 
+                                            <label class="ui_label_group">
+                                                {{ form.phone }}
+                                            <span class="ui_label">Ваш телефон</span> 
+                                            </label> 
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12"> 
+                                            <label class="ui_label_group">
+                                                {{ form.address }}
+                                            <span class="ui_label">Ваш адрес</span> 
+                                            </label> 
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12"> 
+                                            <label class="ui_label_group">
+                                                {{ form.email }}
+                                            <span class="ui_label">Ваш email (не обязательно)</span> 
+                                            </label> 
+                                        </div>
+                                    </div>
+                                </div>
+                                {% csrf_token %}
+                                <div class="delivery-data-block"> 
+                                    <button class="btn-main" value="Далее">Далее<br></button></div>
+                                <div class="form-info">
+                                    <div class="info-circle">i</div> <span class="black-label">После оформления заказа вам перезвонить
+                                    менеджер для уточнения деталей. В случае оформления заказа после 18:00 с вами свяжутся на
+                                    следующий день</span>
+                                </div>
+                            </form>
+                    </div>
+                    <div class="col-md-6" id="del_block">
+                        <div class="the_product small-product">
+                            <div class="info-part">
+                                <div class="p-title">
+                                    <div class="delivery-price"> <span class="price-delivery"> Доставка по <br><span
+                                        title="Выбрать другой город" class="city-name dropdown-toggle forms_in"
+                                        href="#cities-list">Нур-Султан (Астана)</span> - <span> <span id="the_price-7561"
+                                            class="the_price_delivery" data-product="7561"> бесплатно </span> </span> </span> </div>
+                                </div>
+                            </div>
+                            {% for item in cart %}
+                                    <li>
+                                    {{ item.quantity }}x {{ item.product.name }}
+                                    <span>{{ item.total_price }} тг</span>
+                                    </li>
+                                {% endfor %}
+                                <div class="amount-totals"> Количество: <span class="black">{{cart|length}} товаров</span> </div>
+                            
+                            <div class="price-block">
+                                <div> Итого: <span class="black">{{ cart.get_total_price }} тг</span> </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            
+          </div>
+        </div>
+      </div>
+      <script src="{% static "img/scripts.js" %}"></script>
+      <script src="{% static "img/jquery-2.2.1.min.js" %}"></script>
+      <script src="{% static "img/bootstrap.min.js" %}"></script>
+      <script src="{% static "img/jquery.fancybox.min.js" %}"></script>
+      <script src="{% static "img/jquery.lazy.min.js" %}"></script>
+{% endblock %}

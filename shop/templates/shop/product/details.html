@@ -1,0 +1,344 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}
+{{ product.name }}
+{% endblock %}
+
+{% block content %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/js/lightgallery-all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lg-fullscreen/1.1.0/lg-fullscreen.min.js"></script>
+
+<main>
+  <section class="white-back">
+    <div class="main-container inner container" id="product-inner-data">
+      <div class="row">
+        <div class="col-md-12" itemscope="" itemtype="http://schema.org/Product">
+          <meta itemprop="sku" content="{{ product.sku }}">
+          <div class="row product-info">
+            <div class="col-md-12 hide-on-pc"> <span class="product-mob-title main-heading"> {{ product.name }} </span>
+            </div>
+            <div class="col-md-6 images-block">
+              <div class="left-part"> </div>
+
+              <div class="the_gallery">
+                <div class="big_image product-gallery" id="big_image">
+                  <div id="sync1" class="owl-carousel owl-theme owl-loaded">
+                    <div class="owl-stage-outer">
+                      <div class="owl-stage"
+                        style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 565px;">
+                        <div class="owl-item active" style="width: 555px; margin-right: 10px;">
+
+                          <div id="preview">
+                            <a href="{{ product.image.url }}">
+                              <img src="{{ product.image.url }}"
+                                sizes="(max-width: 320px) 320px, (max-width: 480px) 440px">
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="owl-controls">
+                      <div class="owl-nav">
+                        <div class="owl-prev" style="display: none;">prev</div>
+                        <div class="owl-next" style="display: none;">next</div>
+                      </div>
+
+                    </div>
+                    <div class="owl-thumbs"></div>
+                  </div>
+                </div>
+                <div class="thumb_holder">
+                  <div class="owl-thumbs owl-carousel owl-theme owl-loaded" id="sync2">
+                    <div class="owl-stage-outer">
+                      <div class="owl-stage"
+                        style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 151.333px;">
+                        <div class="owl-item active" style="width: 141.333px; margin-right: 10px;">
+                          <div class="item owl-thumb-item activated"> <img src="{{ product.image.url }}"
+                              alt="{{ product.name }}"> </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="owl-controls">
+                      <div class="owl-nav">
+                        <div class="owl-prev disabled"><i class="fa fa-angle-left"></i></div>
+                        <div class="owl-next disabled"><i class="fa fa-angle-right"></i></div>
+                      </div>
+
+                    </div>
+                    <div class="owl-thumbs"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 product-details">
+              <div class="the_detailed">
+                <div class="quick">
+                  <div class="rate_holder" itemprop="aggregateRating" itemscope=""
+                    itemtype="http://schema.org/AggregateRating">
+                    <div> <span class="star_rating"> <i class="fa fa-star filled-star"></i><i
+                          class="fa fa-star filled-star"></i><i class="fa fa-star filled-star"></i><i
+                          class="fa fa-star filled-star"></i><i class="fa fa-star filled-star"></i></span> <span
+                        itemprop="ratingValue">4.59</span> </div>
+                  </div>
+                </div>
+                <div class="short-card-desc" itemprop="description"> </div>
+                <meta itemprop="brand" content="FORMAT">
+                <h1 class="main-heading hide-on-mob" itemprop="name">{{ product.name }}</h1>
+                <div class="product-in-btn-price">
+                  <div class="price-holder" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                    <link itemprop="availability" href="http://schema.org/InStock">
+
+                    <meta itemprop="price" content="{{ product.price }}">
+                    <meta itemprop="priceCurrency" content="KZT"> <span class="price-new"> <span><span
+                          id="the_price-7898" class="the_price_d" data-product="7898">{{ product.price }}</span></span>
+                      тг </span>
+                    <span class="price-delivery"> Доставка по <br>Нур-Султан (Астана) бесплатно </span>
+                    </span> </span>
+                  </div>
+                  <form action="{% url "cart:cart_add" product.id %}" method="post">
+                    {% csrf_token %}
+                    <div class="'button"> <button type="submit" class="btn btn-cart"> Купить товар </button>
+                      <br> <br>
+                      <div class="credit-row grid_credit credit-kaspi">
+                        <div class="ks-widget" data-template="flatButton" data-merchant-sku="{{ product.sku }}"
+                          data-merchant-code="9818048" data-city="710000000" data-style="mobile" id="ks-l1eup2pe"></div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="amount_controller">
+                  <style>
+                    select {
+                      width: fit-content;
+                    }
+                  </style>
+                  {{cart_product_form}}
+                  {% if product.available %}
+                  <div class="ware-badge on-ware">
+                    <i class="fa fa-check"></i> Есть в наличии
+                  </div>
+                  {% else %}
+                  <div class="ware-badge not-on-ware">
+                    <i class="fa fa-remove"></i> Нет в наличии
+                  </div>
+                  {% endif %}
+                </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="row product-tabs">
+
+            <div class="col-md-5">
+              <ul class="nav nav-tabs responsive hidden-xs hidden-sm" id="tabs-1">
+                <li role="presentation" class="active">
+                  <a data-toggle="tab" href="#chars" aria-expanded="true">
+                    <h2>Характеристики</h2>
+                  </a></li>
+                <li role="presentation"><a data-toggle="tab" href="#delivery_tab" aria-expanded="false">
+                    <h2>Доставка и оплата</h2>
+                  </a></li>
+              </ul>
+              <div class="tab-content responsive hidden-xs hidden-sm">
+                <div role="tabpanel" class="fade active in tab-pane" id="chars">
+                  <table class="props_t">
+                    <tbody>
+                      <tr>
+                        <td class="prop_title"> <span>Производитель</span> </td>
+                        <td class="prop_value text-right"> <span>
+                            <a>{{ product.producer }}</a></span> </td>
+                      </tr>
+                      <tr>
+                        <td class="prop_title"> <span>возрастная группа </span> </td>
+                        <td class="prop_value text-right"> <span>{{ product.age_group }} <small></small></span> </td>
+                      </tr>
+                      <tr>
+                        <td class="prop_title"> <span>размер рамы</span> </td>
+                        <td class="prop_value text-right"> <span>{{ product.razmer }} <small></small></span> </td>
+                      </tr>
+                      <tr>
+                        <td class="prop_title"> <span>цвет</span> </td>
+                        <td class="prop_value text-right"> <span>{{ product.color }} <small></small></span> </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div role="tabpanel" class="fade tab-pane" id="delivery_tab">
+                  <div class="delivery-data-block">
+                    <div>Способ доставки:<span>курьером до двери, самовывозом с магазина</span></div>
+                  </div>
+                  <div class="del-flex">
+                    <div>
+                      <div class="benefit_icon warranty"> <img src="{% static "scripts/truck.png" %}">
+                      </div>
+                    </div>
+                    <div class="benefit_info warranty">
+                      <div class="benefit_title warranty"> Оперативная доставка </div>
+                      <div class="benefit_description warranty"> доставим в течении 2-3 часов с момента заказа
+                        выбранный
+                        товар, прямо до двери (для городов Алматы и Астана). </div>
+                    </div>
+                  </div>
+                  <div class="del-flex">
+                    <div>
+                      <div class="benefit_icon warranty"> <img src="{% static "scripts/calendar.png" %}">
+                      </div>
+                    </div>
+                    <div class="benefit_info warranty">
+                      <div class="benefit_title warranty"> Рассрочка на 3 мес </div>
+                      <div class="benefit_description warranty"> честная рассрочка на 3 месяца, без % и
+                        первоначального
+                        взноса. </div>
+                    </div>
+                  </div>
+                  <div class="del-flex">
+                    <div>
+                      <div class="benefit_icon warranty"> <img src="{% static "scripts/card.png" %}">
+                      </div>
+                    </div>
+                    <div class="benefit_info warranty">
+                      <div class="benefit_title warranty"> Два способа оплаты </div>
+                      <div class="benefit_description warranty"> оплата наличными курьеру при получении товара или
+                        банковской картой через наш сайт. </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel-group responsive visible-xs visible-sm" id="collapse-tabs-1">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse"
+                        data-parent="#collapse-tabs-1" href="#collapse-chars" aria-expanded="true">
+                        <h2>Характеристики</h2>
+                      </a></h4>
+                  </div>
+                  <div id="collapse-chars" class="panel-collapse collapse in" aria-expanded="true">
+                    <table class="props_t">
+                      <tbody>
+                        <tr>
+                          <td class="prop_title"> <span>Производитель</span> </td>
+                          <td class="prop_value text-right"> <span>
+                              <a>{{ product.producer }}</a></span> </td>
+                        </tr>
+                        <tr>
+                          <td class="prop_title"> <span>возрастная группа </span> </td>
+                          <td class="prop_value text-right"> <span>{{ product.age_group }} <small></small></span> </td>
+                        </tr>
+                        <tr>
+                          <td class="prop_title"> <span>размер рамы</span> </td>
+                          <td class="prop_value text-right"> <span>{{ product.razmer }} <small></small></span> </td>
+                        </tr>
+                        <tr>
+                          <td class="prop_title"> <span>цвет</span> </td>
+                          <td class="prop_value text-right"> <span>{{ product.color }} <small></small></span> </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse"
+                        data-parent="#collapse-tabs-1" href="#collapse-delivery_tab">
+                        <h2>Доставка и оплата</h2>
+                      </a></h4>
+                  </div>
+                  <div id="collapse-delivery_tab" class="panel-collapse collapse">
+
+                    <div class="delivery-data-block">
+                      <div>Способ доставки:<span>курьером до двери, самовывозом с магазина</span></div>
+                    </div>
+                    <div class="del-flex">
+                      <div>
+                        <div class="benefit_icon warranty"> <img src="{% static "scripts/truck.png" %}">
+                        </div>
+                      </div>
+                      <div class="benefit_info warranty">
+                        <div class="benefit_title warranty"> Оперативная доставка </div>
+                        <div class="benefit_description warranty"> доставим в течении 2-3 часов с момента заказа
+                          выбранный
+                          товар, прямо до двери (для городов Алматы и Астана). </div>
+                      </div>
+                    </div>
+                    <div class="del-flex">
+                      <div>
+                        <div class="benefit_icon warranty"> <img src="{% static "scripts/calendar.png" %}">
+                        </div>
+                      </div>
+                      <div class="benefit_info warranty">
+                        <div class="benefit_title warranty"> Рассрочка на 3 мес </div>
+                        <div class="benefit_description warranty"> честная рассрочка на 3 месяца, без % и
+                          первоначального
+                          взноса. </div>
+                      </div>
+                    </div>
+                    <div class="del-flex">
+                      <div>
+                        <div class="benefit_icon warranty"> <img src="{% static "scripts/card.png" %}">
+                        </div>
+                      </div>
+                      <div class="benefit_info warranty">
+                        <div class="benefit_title warranty"> Два способа оплаты </div>
+                        <div class="benefit_description warranty"> оплата наличными курьеру при получении товара или
+                          банковской картой через наш сайт. </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  $("#preview").lightGallery({
+    fullScreen: true
+  });
+
+</script>
+<script>
+  (function (d, s, id) {
+    var js, kjs;
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://kaspi.kz/kaspibutton/widget/ks-wi_ext.js';
+    kjs = document.getElementsByTagName(s)[0]
+    kjs.parentNode.insertBefore(js, kjs);
+  }(document, 'script', 'KS-Widget'));
+</script>
+<script src="{% static "scripts/jquery-2.2.1.min.js" %}"></script>
+<script src="{% static "scripts/owl.carousel.js" %}"></script>
+<script src="{% static "scripts/bootstrap.min.js" %}"></script>
+<script src="{% static "scripts/jquery.fancybox.min.js" %}"></script>
+
+<script src="{% static "scripts/mask.js" %}"></script>
+<script src="{% static "scripts/lg-pager.js" %} "></script>
+      <script
+        src=" {% static "scripts/jquery.lazy.min.js" %}"></script>
+<script src="{% static "scripts/js.cookie.min.js" %}"></script>
+<script src="{% static "scripts/scripts.js" %}"></script>
+
+<script type="text/javascript" async="" src="{% static "scripts/media.js" %}"></script>
+<script type="text/javascript" async="" src="{% static "scripts/analytics.js" %} "></script>
+      <script type=" text/javascript" async="" id="topmailru-code" src="https://top-fwz1.mail.ru/js/code.js"></script>
+<script type="text/javascript" async="" src="{% static "scripts/top100.js" %}"></script>
+<script async="" src="{% static "scripts/fbevents.js" %}"></script>
+<script async="" src="{% static "scripts/tag.js" %}"></script>
+<script>window.dataLayer = window.dataLayer || [];</script>
+<link href="{% static "img/bootstrap.min.css" %}" rel="stylesheet">
+<link href="{% static "img/jquery.fancybox.min.css" %}" rel="stylesheet">
+<link href="{% static "img/lightgallery.css" %}" rel="stylesheet">
+<link href="{% static "img/preloader.css" %}" rel="stylesheet">
+<link href="{% static "img/style2.css" %}" rel="stylesheet">
+{% endblock %}

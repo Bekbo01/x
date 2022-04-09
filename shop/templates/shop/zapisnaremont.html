@@ -1,0 +1,623 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %} Запись на ремонт {% endblock %}
+
+{% block content %}
+
+<main id="main-content"><div class="ks_wrap"><section class="kss_breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+    <div class="container">
+        <div class="row align-items-center m-0">
+            <ul><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="/" class="kss_home" itemprop="item">
+                    <meta itemprop="name" content="Главная"><meta itemprop="position" content="1"></a>
+                </li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <a href="/xtradecontacts" itemprop="item">
+            <span itemprop="name">Контакты</span><meta itemprop="position" content="2"></a></li><li>
+                <span class="last">Запись на ремонт</span></li></ul>
+            </div>
+        </div></section>
+    </div><!-- internal navigation breadcrumbs --><!-- plugin hook: 'frontend_header' -->        
+    <div id="page" role="main"><style>.text-center{text-align:center;}.text-right{text-align:right}.text-justify{text-align:justify;}</style>
+        <div class="ks_wrap">
+    <div class="ks_wrap">
+        <div class="kss_wrap mb-6">
+            <section>
+                <div class="container">
+                    <h1>Запись на ремонт</h1>
+                    <form action="file:///C:/Users/22706/Desktop/X-place/%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82/Remont.html" class="kss_form4" autocomplete="off">
+                        <div class="kss_block kss_type">
+                            <label for="">Тип снаряжения</label>
+                            <div class="row m-0 kss_checkbox2-wrap repair-type required-active">
+                                <div class="kss_checkbox2" data-rem="1">Велосипед</div>
+                                <div class="kss_checkbox2" data-rem="2">Гироскутер</div>
+                                <div class="kss_checkbox2" data-rem="3">Самокат</div>
+                                
+                            </div>
+                        </div>
+                        <div class="comment-block">
+                            <div class="row m-0 kss_comment">
+                                <label for="">Что хотите сделать</label>
+                                <textarea class="comment" name="comment"></textarea>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="kss_block kss_workshop hidden">
+                            <label for="">Выбор мастерской</label>
+                            <div class="row m-0 kss_checkbox2-wrap workshop required-active"><div class="kss_checkbox2 active">Нагорная (с 12 до 21)</div><div class="kss_checkbox2">Проспект мира (пт-вс: с 12 до 20.30)</div></div>
+                        </div>
+    
+                        <div class="row m-0 kss_datetime">
+                            <div class="kss_block kss_line date-selector required-input">
+                                <label for="">Выберите дату</label>
+                                <input class="date-input hasDatepicker3" type="text" placeholder="2022-01-23">
+                            </div>
+                            <div class="kss_block kss_line time-selector required-input disabled">
+                                <label for="">Выберите время</label>
+                                <div class="ks-select kss_select">
+                                    <div class="ks-select__current row ml-0 mr-0 justify-content-between align-items-center active">
+                                    <span class="time-text">12:00</span>
+                                    <div class="kss_arrow"></div>
+                                    </div>
+                                    <div class="ks-select__block" style="display: none;">
+                                        <div class="ks-select__list">
+                                            <div class="ks-select__item active">12:00</div>
+                                            <div class="ks-select__item">13:00</div>
+                                            <div class="ks-select__item">14:00</div>
+                                            <div class="ks-select__item">15:00</div>
+                                            <div class="ks-select__item">16:00</div>
+                                            <div class="ks-select__item">17:00</div>
+                                            <div class="ks-select__item">18:00</div>
+                                            <div class="ks-select__item">19:00</div>
+                                            <div class="ks-select__item">20:00</div>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <div class="row m-0 kss_fio">
+                                <div class="kss_block kss_line required-input">
+                                    <label for="">Фамилия</label>
+                                    <input class="member-input lastname-input" type="text" name="contact[lastname]" placeholder="Иванов" autocomplete="off">
+                                </div>
+                                <div class="kss_block kss_line required-input">
+                                    <label for="">Имя</label>
+                                    <input class="member-input firstname-input" type="text" name="contact[firstname]" placeholder="Иван" autocomplete="off">
+                                </div>
+                                <div class="kss_block kss_line required-input">
+                                    <label for="">Телефон</label>
+                                    <input class="tel-mask member-input phone-input" type="text" name="contact[phone]" autocomplete="off" placeholder="+7 (___) ___-__-__">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <input type="submit" class="confirm-crm-reapir-form kss_btn kss_btn--blue kss_btn--oval" value="Записаться">
+                        </div>
+                    </form>
+                </div>
+                <div style="display: none;">
+                    
+    <link rel="stylesheet" href="./Remont_files/form.css">
+    <script src="./Remont_files/crm.frontend.form.js.Без названия"></script>
+    
+    
+        <script src="./Remont_files/jquery-1.11.1.min.js.Без названия"></script>
+        <script>
+            var wa_crm_form_jquery = jQuery.noConflict(true);
+        </script>
+    
+    
+    
+    
+    
+    
+                <link href="./Remont_files/jquery-ui.css" rel="stylesheet">
+        
+                <script src="./Remont_files/jquery-ui.min.js.Без названия"></script>
+                        <script src="./Remont_files/datepicker-ru.js.Без названия"></script>
+                
+    
+    
+    
+    <div class="crm-form-block" style="width: 400px; min-height: 0px;" id="crm-form-block-61ec1758583b1">
+    
+        <div class="crm-form-fields-block">
+            <div class="crm-form-fields">
+                <form id="crm-form-block-61ec1758583b1-form" method="post" action="https://extreme-place.ru/crm/form/" enctype="multipart/form-data" target="crm-form-block-61ec1758583b1-form-target" autocomplete="off">
+                                                <div class="crm-form-field " data-id="firstname" data-uid="firstname">
+            <div class="crm-form-field-line crm-form-field-1st-line">
+                <div class="crm-form-field-col crm-caption-col">
+                    <span class="crm-caption">
+                                                Имя
+                                             *                </span>
+                </div>
+                <div class="crm-form-field-col crm-input-col">
+                                        <input class="crm-firstname-input crm-required-input" title="Имя" type="text" name="crm_form[firstname]" value="">
+                        <div class="crm-error-msg-block" data-id="firstname" data-uid="firstname"></div>
+                                </div>
+            </div>
+                </div>
+    
+                                                <div class="crm-form-field " data-id="lastname" data-uid="lastname">
+            <div class="crm-form-field-line crm-form-field-1st-line">
+                <div class="crm-form-field-col crm-caption-col">
+                    <span class="crm-caption">
+                                                Фамилия
+                                             *                </span>
+                </div>
+                <div class="crm-form-field-col crm-input-col">
+                                        <input class="crm-lastname-input crm-required-input" title="Фамилия" type="text" name="crm_form[lastname]" value="">
+                        <div class="crm-error-msg-block" data-id="lastname" data-uid="lastname"></div>
+                                </div>
+            </div>
+                </div>
+    
+                                                <div class="crm-form-field " data-id="phone" data-uid="phone">
+            <div class="crm-form-field-line crm-form-field-1st-line">
+                <div class="crm-form-field-col crm-caption-col">
+                    <span class="crm-caption">
+                                                Телефон
+                                             *                </span>
+                </div>
+                <div class="crm-form-field-col crm-input-col">
+                                        <p><input class="crm-phone-input crm-required-input" title="Телефон" type="text" name="crm_form[phone]" value="" placeholder="+7 (___) ___-__-__"></p>
+                        <div class="crm-error-msg-block" data-id="phone" data-uid="phone"></div>
+                                </div>
+            </div>
+                </div>
+    
+                                                <div class="crm-form-field " data-id="email" data-uid="email">
+            <div class="crm-form-field-line crm-form-field-1st-line">
+                <div class="crm-form-field-col crm-caption-col">
+                    <span class="crm-caption">
+                                                Email
+                                                            </span>
+                </div>
+                <div class="crm-form-field-col crm-input-col">
+                                        <p><input class="crm-email-input" title="Email" type="text" name="crm_form[email]" value=""></p>
+                        <div class="crm-error-msg-block" data-id="email" data-uid="email"></div>
+                                </div>
+            </div>
+                </div>
+    
+                                                <div class="crm-form-field " data-id="chto_remontirovat" data-uid="chto_remontirovat">
+            <div class="crm-form-field-line crm-form-field-1st-line">
+                <div class="crm-form-field-col crm-caption-col">
+                    <span class="crm-caption">
+                                                Что ремонтировать
+                                             *                </span>
+                </div>
+                <div class="crm-form-field-col crm-input-col">
+                                        <select class="crm-chto_remontirovat-input crm-required-input" name="crm_form[chto_remontirovat]"><option value=""></option><option value="Сноуборд">Сноуборд</option><option value="Сноуборды">Сноуборды</option><option value="Горные лыжи">Горные лыжи</option><option value="Детские лыжи">Детские лыжи</option><option value="Сноуборд(ы)+г/лыжи">Сноуборд(ы)+г/лыжи</option><option value="Ботинок(и)">Ботинок(и)</option><option value="Крепления">Крепления</option><option value="------------------------------------">------------------------------------</option><option value="Велосипед">Велосипед</option><option value="Колесо">Колесо</option><option value="Рама">Рама</option><option value="Вилка">Вилка</option><option value="Рама+вилка">Рама+вилка</option><option value="----------------------------------">----------------------------------</option><option value="Самокат">Самокат</option><option value="Электросамокат">Электросамокат</option><option value="Прочее">Прочее</option></select>
+                        <div class="crm-error-msg-block" data-id="chto_remontirovat" data-uid="chto_remontirovat"></div>
+                                </div>
+            </div>
+                </div>
+    
+                                                <div class="crm-form-field " data-id="zhelaemaya_data_remonta" data-uid="zhelaemaya_data_remonta">
+            <div class="crm-form-field-line crm-form-field-1st-line">
+                <div class="crm-form-field-col crm-caption-col">
+                    <span class="crm-caption">
+                                                Желаемая дата ремонта
+                                                            </span>
+                </div>
+                <div class="crm-form-field-col crm-input-col">
+                                        <div class="c-deal-date-field-wrapper" id="c-deal-date-field-wrapper61ec175857c30">
+        <span class="c-datepicker-wrapper js-datepicker-wrapper">
+            <input class="c-datepicker js-datepicker hasDatepicker" type="text" value="" name="crm_form[zhelaemaya_data_remonta]" id="dp1642862424585">
+            <input type="hidden" name="crm_form[zhelaemaya_data_remonta]" value="">
+            <i class="icon16 calendar js-icon"></i>
+        </span>
+        <script>
+            (function ($) {
+                var $field_wrapper = $('#c-deal-date-field-wrapper61ec175857c30'),
+                    $wrapper = $field_wrapper.find(".js-datepicker-wrapper"),
+                    $input = $wrapper.find(".js-datepicker"),
+                    $altField = $wrapper.find('input[type=hidden]');
+    
+                $input.datepicker({
+                    altField: $altField,
+                    altFormat: "yy-mm-dd",
+                    changeMonth: true,
+                    changeYear: true,
+                    onSelect: checkDate
+                });
+    
+                $input.on('blur', checkDate);
+    
+                $input.on("keydown keypress keyup", function(event) {
+                    if ( event.which === 13 ) {
+                        event.preventDefault();
+                    }
+                });
+    
+                $input.on("click", ".js-icon", function () {
+                    $input.focus();
+                });
+    
+                function checkDate() {
+                    var format = $.datepicker._defaults.dateFormat,
+                        is_valid = false;
+                    try {
+                        $.datepicker.parseDate(format, $input.val());
+                        is_valid = true;
+                    } catch(e) {
+    
+                    }
+                    if (is_valid) {
+                        $input.data('last-correct-value', $input.val());
+                        $altField.data('last-correct-value', $altField.val());
+                    } else {
+                        $input.val($input.data('last-correct-value') || '');
+                        $altField.val($altField.data('last-correct-value') || '');
+                    }
+                    $field_wrapper.find('.errormsg').remove();
+                }
+    
+                // clearing hidden input on text input clearing
+    
+                (function (onChange) {
+                    var timer = null;
+                    $input.keydown(function () {
+                        timer && clearTimeout(timer);
+                        timer = setTimeout(function () {
+                            onChange();
+                        }, 250);
+                    });
+                    $input.change(onChange);
+                })(function () {
+                    if ($.trim($input.val()).length <= 0) {
+                        $input.datepicker('setDate', null);
+                    }
+                });
+    
+            })(jQuery);
+        </script>
+    </div>
+    
+                        <div class="crm-error-msg-block" data-id="zhelaemaya_data_remonta" data-uid="zhelaemaya_data_remonta"></div>
+                                </div>
+            </div>
+                </div>
+    
+                                                <div class="crm-form-field " data-id="vremya_remonta2" data-uid="vremya_remonta2">
+            <div class="crm-form-field-line crm-form-field-1st-line">
+                <div class="crm-form-field-col crm-caption-col">
+                    <span class="crm-caption">
+                                                Время ремонта
+                                             *                </span>
+                </div>
+                <div class="crm-form-field-col crm-input-col">
+                                        <select class="crm-vremya_remonta2-input crm-required-input" name="crm_form[vremya_remonta2]"><option value=""></option><option value="12:00">12:00</option><option value="13:00">13:00</option><option value="14:00">14:00</option><option value="15:00">15:00</option><option value="16:00">16:00</option><option value="17:00">17:00</option><option value="18:00">18:00</option><option value="19:00">19:00</option><option value="20:00">20:00</option></select>
+                        <div class="crm-error-msg-block" data-id="vremya_remonta2" data-uid="vremya_remonta2"></div>
+                                </div>
+            </div>
+                </div>
+    
+                                                <div class="crm-form-field " data-id="vybrannaya_tochka" data-uid="vybrannaya_tochka">
+            <div class="crm-form-field-line crm-form-field-1st-line">
+                <div class="crm-form-field-col crm-caption-col">
+                    <span class="crm-caption">
+                                                Форма записи - Выбор мастерской
+                                                            </span>
+                </div>
+                <div class="crm-form-field-col crm-input-col">
+                                        <select class="crm-vybrannaya_tochka-input" name="crm_form[vybrannaya_tochka]"><option value=""></option><option value="Нагорная (с 12 до 21)">Нагорная (с 12 до 21)</option><option value="Проспект мира (пт-вс: с 12 до 20.30)">Проспект мира (пт-вс: с 12 до 20.30)</option></select>
+                        <div class="crm-error-msg-block" data-id="vybrannaya_tochka" data-uid="vybrannaya_tochka"></div>
+                                </div>
+            </div>
+                </div>
+    
+                                                <div class="crm-form-field " data-id="stranitsa_otpravki_formy" data-uid="stranitsa_otpravki_formy">
+            <div class="crm-form-field-line crm-form-field-1st-line">
+                <div class="crm-form-field-col crm-caption-col">
+                    <span class="crm-caption">
+                                                Страница отправки формы
+                                                            </span>
+                </div>
+                <div class="crm-form-field-col crm-input-col">
+                                        <input class="crm-stranitsa_otpravki_formy-input" title="Страница отправки формы" type="text" name="crm_form[stranitsa_otpravki_formy]" value="">
+                        <div class="crm-error-msg-block" data-id="stranitsa_otpravki_formy" data-uid="stranitsa_otpravki_formy"></div>
+                                </div>
+            </div>
+                </div>
+    
+                                                <div class="crm-form-field " data-id="primechanie2" data-uid="primechanie2">
+            <div class="crm-form-field-line crm-form-field-1st-line">
+                <div class="crm-form-field-col crm-caption-col">
+                    <span class="crm-caption">
+                                                Примечание
+                                             *                </span>
+                </div>
+                <div class="crm-form-field-col crm-input-col">
+                                        <textarea class="crm-primechanie2-input crm-required-input" name="crm_form[primechanie2]" title="Что хотите сделать ФЗ"></textarea>
+                        <div class="crm-error-msg-block" data-id="primechanie2" data-uid="primechanie2"></div>
+                                </div>
+            </div>
+                </div>
+    
+                                    <div class="crm-error-msg crm-error-common"></div>
+                    <div class="crm-submit-button-wrapper">
+                        <input type="hidden" name="crm_form[id]" value="36">
+                        <input class="crm-form-submit-button button green" type="submit" value="Записаться">
+                        <i class="icon16 loading crm-loading" style="display: none;"></i>
+                    </div>
+                </form>
+    
+                <iframe src="javascript:true" name="crm-form-block-61ec1758583b1-form-target" id="crm-form-block-61ec1758583b1-form-target" style="width:0 !important;height:0 !important;border:0 !important;" src="./Remont_files/saved_resource(2).html"></iframe>
+    
+                <div class="crm-after-submit-block">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function (jQuery) {
+            crmFrontendForm('crm-form-block-61ec1758583b1', false, {
+                wa_url: "\/",
+                wa_version: "2.4.1",
+                lang: "ru",
+                jQuery: typeof wa_crm_form_jquery !== 'undefined' ? wa_crm_form_jquery : jQuery,
+                validate_messages: {
+                    required: "Это поле обязательное",
+                    passwords_not_match: "Пароли не совпадают"
+                },
+                messages: {
+                    server_error: "Ошибка сервера",
+                }
+            });
+            if (typeof wa_crm_form_jquery !== 'undefined') {
+                wa_crm_form_jquery == undefined;
+            }
+        })(jQuery);
+    </script>
+    <br>
+                </div>
+            </section>
+        </div>
+        <div class="modal-crm-form hidden" style="display: none;">
+          <div class="modal-content">
+              <div class="modal-header"><a href="https://extreme-place.ru/contacts/zapis-na-remont/#" class="close-btn2">×</a></div>
+                <div class="crm-form-block" style="width: 300px; min-height: 0px;">
+                Благодарим за запись на ремонт, будем ждать Вас в нашем сервисе! <p>...</p> Если по какой-то причине, мы не сможем Вас принять, мы обязательно с Вами свяжемся.<p>...</p><p>&nbsp;</p>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    
+    <style>
+        .error-alert{color: red;font-size: 0.7em!important;}
+    </style>
+    <script>
+    $(document).on("ready", function() {
+    
+        var dates;
+        var workshop;
+        pickmeup.defaults.locales['ru'] = {
+            days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+            daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+            daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+            months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+            monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
+        };
+    
+        var min_date = new Date();
+        min_date.setDate(min_date.getDate() + 1);
+        pickmeup('.hasDatepicker3', {
+            locale: 'ru',
+            default_date: false,
+            hide_on_select: true,
+            format: 'Y-m-d',
+            class_name: "repair",
+            select_month: false,
+            select_year: false,
+            min: min_date,
+        });
+        
+        pickmeup('.hasDatepicker3').clear();
+        
+        $('.kss_form4 .workshop img').remove();
+        $('select.crm-vybrannaya_tochka-input>option').each(function () {
+            if($(this).val() != ""){
+                $('.kss_form4 .workshop').append('<div class="kss_checkbox2">'+$(this).val()+'</div>');
+            }
+        });
+        
+        //это код для клика на первой мастерской в невидимом, сейчас, списке
+        var workshop_i = setInterval(function () {
+            if($('.kss_form4 .workshop .kss_checkbox2').length > 0){
+                $('.kss_form4 .workshop .kss_checkbox2').first().click();
+                clearInterval(workshop_i);
+            }
+        }, 100);
+        //
+        
+        $(".kss_form4 .workshop").on('click', '.kss_checkbox2', function() {
+            if($(this).hasClass("disabled")){return false;}
+            $(this).closest(".kss_block").removeClass("error");
+            if($(this).get(0) !== $(this).closest('.kss_checkbox2-wrap').find('.kss_checkbox2.active').get(0)) {
+                $(this).closest('.kss_checkbox2-wrap').find('.kss_checkbox2.active').removeClass('active');
+            }
+            $(this).toggleClass('active');
+        })
+        
+        $('.kss_date input[name="date"]').click(function() {
+            $(".pickmeup").toggle()
+        });
+        
+        if($(".hasDatepicker3").val() == ""){
+            $(".kss_datetime .time-selector").addClass("disabled");
+        }
+        
+        $('.kss_form4 .workshop').on("click", ".kss_checkbox2", function () {
+            if (workshop != $(this).text() || $('.workshop .kss_checkbox2.active').length == 0){
+                $('.hasDatepicker3').val('').attr('disabled','disabled');
+                $(".kss_datetime .time-selector .ks-select__item").removeClass('active');
+                $(".kss_datetime .time-selector .ks-select__item").first().addClass('active').click();
+                $(".kss_datetime .time-selector .ks-select__block").toggle();
+                $(".kss_datetime .time-selector").addClass("disabled");        
+            }
+            if ($(this).hasClass('active')) {
+                workshop = $(this).text();
+                $('.hasDatepicker3').removeAttr('disabled');
+                if($(".hasDatepicker3").val() != ""){
+                    $(".kss_datetime .time-selector").removeClass("disabled");
+                }
+            }
+        });
+        
+        $(".hasDatepicker3").on("pickmeup-change", function (e) {
+            $(".pickmeup.repair .pmu-days .pmu-button").each(function () {
+                $(this).removeClass("disabled");
+            });
+            $(this).closest(".kss_block").removeClass("error");
+            $(".kss_datetime .time-selector .ks-select__item").removeClass("disabled");
+            $(".kss_datetime .time-selector").removeClass("disabled");
+            var cur_date = pickmeup('.hasDatepicker3').get_date("Y-m-d");
+            if(dates && dates[cur_date]){
+                $.each(dates[cur_date]['times'], function (i, v) {
+                    $(".kss_datetime .time-selector .ks-select__item").each(function () {
+                        if($(this).text() == v.time){
+                            $(this).addClass("disabled");
+                        }
+                    });
+                });
+            }
+        });
+        
+        $(".kss_datetime .time-selector .ks-select__item.disabled").on("click", function () {
+            return false;
+        });
+        
+        $(".hasDatepicker3").on('pickmeup-fill', function (e) {
+            var date = $(".pickmeup.repair .pmu-month.pmu-button").text();
+            console.log(date);
+            $.post("/ep/getrepairdates/", {date: date, workshop: workshop}, function (r) {
+                $(".pickmeup.repair .pmu-days .pmu-button").each(function () {
+                    $(this).removeClass("disabled");
+                });
+                if(r.status == "ok"){
+                    dates = r.data;
+                    $.each(r.data, function (i, v){
+                        $(".pickmeup.repair .pmu-days .pmu-button").not(".pmu-not-in-month").each(function () {
+                            if($(this).text() == v.day && v.full == 1){
+                                $(this).addClass("disabled");
+                            }
+                        })
+                    });
+                    
+                    if($(".kss_datetime .time-selector .ks-select__item.active").hasClass("disabled")){
+                        $(".kss_datetime .time-selector .ks-select__item").not(".disabled").first().click();
+                        $(".kss_datetime .time-selector .ks-select__block").toggle();
+                    }
+                    
+                    $(".pickmeup.repair .pmu-days .pmu-button.disabled").off("click").on("click", function() {
+                        alert("На эту дату нет свободных мест");
+                        return false;
+                    });
+                    $(".pickmeup.repair .pmu-days .pmu-not-in-month").off("click").on("click", function() {
+                        return false;
+                    });
+                }
+            });
+        });
+    
+        $(".confirm-crm-reapir-form").click(function () {
+            var form = $(this).closest(".kss_form4");
+            form.find('.error-alert').remove();
+            form.find(".required-active").each(function() {
+                if($(this).find(".kss_checkbox2.active").length == 0){
+                    $(this).closest(".kss_block").addClass("error");
+                }
+            });
+            form.find(".required-input").each(function() {
+            $(this).closest(".kss_block").removeClass("error");
+                var value = $(this).find("input").val();
+                if($(this).closest(".member").length && $(this).closest(".member").hasClass("hidden")){
+                    return true;
+                }
+                if(!value && $(this).find(".ks-select__current").length){
+                    value = $(this).find(".ks-select__current span").text();
+                }
+                if(value){
+                    return true;
+                } else {
+                    $(this).closest(".kss_block").addClass("error");
+                }
+            });
+    
+            var phone = form.find('.phone-input');
+            var clean_phone = phone.val().match(/\d+/g,'').join('');
+            if(clean_phone.length != 11){
+                phone.closest(".kss_block").addClass("error");
+            }else{
+                phone.closest(".kss_block").removeClass("error");
+            }
+    
+            var crm_form = $(this).closest("section").find(".crm-form-block form");
+    
+            if(form.find(".kss_block.error").length > 0){
+                form.append("<div class='error-alert'>Поля отмеченные красным не выбранны или не правильно заполнены.</div>");
+                console.log("errors");
+                return false;
+            }
+    
+            crm_form.find("input.crm-stranitsa_otpravki_formy-input").val("Запись на ремонт");
+            crm_form.find("input.crm-lastname-input").val(form.find(".lastname-input").first().val());
+            crm_form.find("input.crm-firstname-input").val(form.find(".firstname-input").first().val());
+            crm_form.find("input.crm-phone-input").val(form.find(".phone-input").first().val());
+            //crm_form.find("input.crm-email-input").val(form.find(".email-input").first().val());
+            crm_form.find("select.crm-chto_remontirovat-input").val(form.find(".repair-type .active").text());
+            crm_form.find("select.crm-vybrannaya_tochka-input").val(form.find(".workshop .active").text());
+            crm_form.find("input[name='crm_form[zhelaemaya_data_remonta]']").val(form.find(".date-input").val());
+            crm_form.find("select.crm-vremya_remonta2-input").val(form.find(".time-text").text());
+            crm_form.find("textarea.crm-primechanie2-input").val(form.find(".comment").val());
+            //return false;
+            form.find(".member input").each(function () {
+                crm_form.append($(this).clone());
+            });
+            
+            crm_form.submit();
+            $("body").prepend("<div class='modal-backdrop show'></div>");
+            $("html").css("overflow","hidden");
+            $(".modal-crm-form").removeClass("hidden").show();
+            $(".result-window").removeClass("hidden");
+            return false;
+        });
+      
+          $("body").on("click",".modal-crm-form .close-btn2", function () {
+            $(this).closest(".modal-crm-form").addClass("hidden");
+            $("body").find(".modal-backdrop").remove();
+            $("html").css("overflow","auto");
+            $(".kss_form4").remove();
+            window.location.assign(document.URL);
+            return false;
+        });  
+    });
+    </script>
+    <style>
+        .ks_wrap .kss_form4{max-width: 550px}
+        .ks_wrap .kss_form4 input:disabled{border: 1px solid #ccc}
+        .ks_wrap .workshop .kss_checkbox2{min-width: max-content; min-width: -moz-fit-content;min-width: -moz-fit-content;min-width: -moz-fit-content;padding: 10px;height: auto;}
+        .pickmeup .pmu-instance .pmu-button.disabled{opacity: 0.5; cursor: not-allowed;}
+        .pickmeup .pmu-instance .pmu-disabled{opacity: 0.5!important; cursor: not-allowed!important;}
+        .ks_wrap .kss_comment{display:block;width:100%}
+        .ks_wrap textarea.comment{border: 1px solid orange;max-width: 459px;}
+        .ks_wrap .confirm-crm-reapir-form{margin: 0 auto}
+        .modal-crm-form .crm-form-block{padding-bottom: 50px;text-align: center}
+        @media(max-width: 576px){.ks_wrap .kss_checkbox2{width: 100%!important;min-width: 100%!important;}.ks_wrap .confirm-crm-reapir-form{margin:0 15px;}}
+    </style>
+    </div>
+    <script>
+      var uni_page_name="Запись на ремонт";
+    </script>
+    
+        
+</main>
+
+{% endblock %}

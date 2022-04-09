@@ -1,0 +1,91 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}
+Оформление заказа
+{% endblock %}
+
+{% block content %}
+
+
+<link rel="stylesheet" href="{% static "img/jquery.fancybox.min.css" %}">
+
+<link href="{% static "img/bootstrap.min.css" %}" rel="stylesheet">
+<link href="{% static "img/jquery.fancybox.min.css" %}" rel="stylesheet">
+<link href="{% static "img/lightgallery.css" %}" rel="stylesheet">
+<link href="{% static "img/preloader.css" %}" rel="stylesheet">
+<link href="{% static "img/style2.css" %}" rel="stylesheet">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="main-heading "> Оформление заказа </h1>
+        <div id="cart-actions-holder" class="col-md-12 no-padding">
+            <div id="the_list_of_products_in_cart" class="step_point">
+            {% for item in cart %}
+                {% with product=item.product %}
+              <div class="the_product">
+                <div class="image_product"> <a
+                    href="{{ product.get_absolute_url }}" target="_blank">
+                    <img src="{{ product.image.url }}" class="img-responsive"
+                      alt="{{ product.name }}"> </a> </div>
+                <div class="info-part">
+                  <div class="p-title">
+                    <div> Товар: <a target="_blank"
+                        href="{{ product.get_absolute_url }}"
+                        class="product-art black">{{ product.name }}</a> </div>
+                  </div>
+                  <div class="controls">
+                    <div class="price-block">
+                      <div> Цена: <span class="black">{{ product.price }} тг</span> </div>
+                    </div>
+                    <div class="real-control">
+                        <form action="{% url "cart:cart_add" product.id %}" method="post">
+                      <div> Количество: 
+                          {{ item.update_quantity_form.quantity }}
+                        {{ item.update_quantity_form.override }} 
+                        <input class="btn-main" type="submit" value="Изменить">
+
+                        {% csrf_token %}
+                    </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="properties">
+                  <div class="cart-prop"> цвет: <span class="black">{{ product.color }} <small></small></span> </div>
+                  <div class="cart-prop"> размер рамы: <span class="black">{{ product.razmer }} <small></small></span> </div>
+                </div> <form action="{% url "cart:cart_remove" product.id %}" method="post">
+                <button type="submit" class="remove-from-cart"> <svg
+                    xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
+                    <path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+                  </svg> </button>
+                  
+                    {% csrf_token %}
+                    </form>
+              </div>
+              {% endwith %}
+              {% endfor %}
+              <div class="the-cart-end the-cart-end-relation">
+                <div class="cart-totals">
+                  <div class="delivery-price"> <span class="price-delivery"> Доставка по <br><span
+                        title="Выбрать другой город" class="city-name dropdown-toggle forms_in"
+                        href="#cities-list">Нур-Султан (Астана)</span> - <span> <span id="the_price-7883"
+                          class="the_price_delivery" data-product="7883"> бесплатно </span> </span> </span> </div>
+                  <div class="the-totals"> Итого: <span>{{ cart.get_total_price }} тг</span> </div>
+                  <div class="amount-totals"> Количество: <span>{{ cart|length }} товаров</span> </div>
+                  <a href="{% url "shop:product_list" %}" class="btn btn-main">Продолжить покупки</a>
+                  <a href="{% url "orders:order_create" %}" class="btn btn-main">Оформить заказ</a>
+
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="{% static "img/scripts.js" %}"></script>
+  <script src="{% static "img/jquery-2.2.1.min.js" %}"></script>
+  <script src="{% static "img/bootstrap.min.js" %}"></script>
+  <script src="{% static "img/jquery.fancybox.min.js" %}"></script>
+  <script src="{% static "img/jquery.lazy.min.js" %}"></script>
+{% endblock %}

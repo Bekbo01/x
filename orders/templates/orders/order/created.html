@@ -1,0 +1,37 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}
+    Спасибо за покупку!
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static "img/jquery.fancybox.min.css" %}">
+    <link href="{% static "img/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "img/jquery.fancybox.min.css" %}" rel="stylesheet">
+    <link href="{% static "img/lightgallery.css" %}" rel="stylesheet">
+    <link href="{% static "img/preloader.css" %}" rel="stylesheet">
+    <link href="{% static "img/style2.css" %}" rel="stylesheet">
+    
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-4"></div>>
+            <div class="col-md-5">
+            <h1 class="main-heading "> Оформление заказа </h1>
+            
+            <div class="form-cart-head justify-content-center"> <h1>Спасибо за покупку!</h1><br>
+                <img class="normal_view" src="{% static "img/cong.jpg" %}" style="width:480px; height: 360px;" loading="lazy" itemprop="contentUrl" sizes="(max-width: 600) 480px, (max-width: 600px) 480px">
+                <p>Ваш заказ был завершен успешно. Ваш номер заказа
+                    <strong>{{ order.id }}</strong>.</p>
+            </div>
+        </div>>
+   
+</div>
+</div>
+</div>
+<script src="{% static "img/scripts.js" %}"></script>
+<script src="{% static "img/jquery-2.2.1.min.js" %}"></script>
+<script src="{% static "img/bootstrap.min.js" %}"></script>
+<script src="{% static "img/jquery.fancybox.min.js" %}"></script>
+<script src="{% static "img/jquery.lazy.min.js" %}"></script>
+{% endblock %}
