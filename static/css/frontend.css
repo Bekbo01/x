@@ -1,5 +1,5 @@
 i.icon16-autobadge { background-repeat:no-repeat; height:16px; width:16px; display:inline-block; text-indent:-9999px; text-decoration:none!important; vertical-align:middle; margin: 0; }
-i.icon16-autobadge.loading-icon { background-image: url("../img/loader2.gif"); z-index: 50; position: relative; }
+i.icon16-autobadge.loading-icon { z-index: 50; position: relative; }
 .autobadge-holder, .autobadge-styles, .autobadge-holder-2 { display: none !important; }
 /* Theme design fixes */
 .s-main-wrapper .s-header-wrapper .s-fixed-container.is-fixed, .list-group-item.active, .list-group-item.active:hover, 
