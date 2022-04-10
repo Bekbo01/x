@@ -625,7 +625,6 @@ color:#99a4ac
 	/* http://bugs.jqueryui.com/ticket/7233
 	 - Resizable: resizable handles fail to work in IE if transparent and content overlaps
 	*/
-	background-image:url(data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=);
 }
 .ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display: none; }
 .ui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0; }
@@ -1066,7 +1065,6 @@ left:50%;
 top:50%;
 margin-left:-40px;
 margin-top:-40px;
-background:url(owl.video.play.png) no-repeat;
 cursor:pointer;
 z-index:1;
 -webkit-backface-visibility:hidden;
