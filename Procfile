@@ -1,3 +1,3 @@
-web: gunicorn xtrade.wsgi:application --preload
-main_worker: python manage.py celery worker --beat --loglevel=info
-release: python3 manage.py migrate
+web: gunicorn xtrade.wsgi --log-file -
+worker: python manage.py celery worker --loglevel=info
+beat: python manage.py celery beat --loglevel=info
