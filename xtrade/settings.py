@@ -185,7 +185,6 @@ from os import environ
 
 #BROKER_URL = environ.get("CLOUDAMQP_URL", "")
 BROKER_URL = 'django://'
-INSTALLED_APPS += ('kombu.transport.django', )
 
 BROKER_POOL_LIMIT = 1
 BROKER_HEARTBEAT = None
