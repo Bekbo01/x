@@ -147,3 +147,25 @@ FORKED_BY_MULTIPROCESSING=1
 # Task async
 #CELERY_BROKER_URL = config('REDIS_URL', 'redis://localhost:6379/0', cast=str)
 #CELERY_RESULT_BACKEND = config('REDIS_URL', 'redis://localhost:6379/0', cast=str)
+
+# corsheaders
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ORIGIN_WHITELIST = (
+    'https://xtrade.herokuapp.com',
+    'https://xtrade.com.kz',
+    'http://xtrade.com.kz',
+    'http://localhost:8080',
+    'http://localhost:8100',
+    'http://localhost:8000',
+    'http://localhost:3000',
+    'http://localhost',
+)
+
+CORS_ALLOW_METHODS = (
+    'GET',
+    'POST',
+    'PUT',
+    'DELETE',
+)
