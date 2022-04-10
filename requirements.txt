@@ -1,6 +1,6 @@
-celery
+celery==5.2.3
 Django==2.2.20
-django-celery
+django-celery==3.3.1
 django-haystack==2.8.1
 django-parler==1.9.2
 django-phonenumber-field==6.1.0
