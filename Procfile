@@ -1,2 +1,2 @@
 web: gunicorn xtrade.wsgi --log-file -
-worker: python manage.py celery worker --loglevel=info
+worker: celery -A xtrade worker --without-heartbeat --without-gossip --without-mingle
