@@ -153,7 +153,8 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ALLOW_CREDENTIALS = True
 
 CORS_ORIGIN_WHITELIST = (
-    'https://xtrade.herokuapp.com',
+    'https://xtradekz.herokuapp.com',
+    'http://xtradekz.herokuapp.com',
     'https://xtrade.com.kz',
     'http://xtrade.com.kz',
     'http://localhost:8080',
