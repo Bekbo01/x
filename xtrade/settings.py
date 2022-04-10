@@ -55,8 +55,6 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-import djcelery
-djcelery.setup_loader()
 
 
 ROOT_URLCONF = 'xtrade.urls'
