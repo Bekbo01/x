@@ -14,3 +14,4 @@ phonenumbers==8.12.46
 whitenoise
 dj-database-url
 psycopg2
+gunicorn
