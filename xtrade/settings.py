@@ -183,7 +183,10 @@ from os import environ
 
 #CELERY_RESULT_BACKEND = "amqp"
 
-BROKER_URL = environ.get("CLOUDAMQP_URL", "")
+#BROKER_URL = environ.get("CLOUDAMQP_URL", "")
+BROKER_URL = 'django://'
+INSTALLED_APPS += ('kombu.transport.django', )
+
 BROKER_POOL_LIMIT = 1
 BROKER_HEARTBEAT = None
 BROKER_CONNECTION_TIMEOUT = 30
