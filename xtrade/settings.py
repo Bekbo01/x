@@ -181,7 +181,7 @@ CORS_ALLOW_METHODS = (
 
 from os import environ
 
-CELERY_RESULT_BACKEND = "amqp"
+#CELERY_RESULT_BACKEND = "amqp"
 BROKER_POOL_LIMIT = 1
-BROKER_URL = environ.get('CLOUDAMQP_URL', '')
+BROKER_URL = 'amqps://nqgmvvba:gg5umXV6T7n1MNRL9ggZR-HF9Gi6InAJ@moose.rmq.cloudamqp.com/nqgmvvba' #environ.get('CLOUDAMQP_URL', '')
 CELERY_TASK_RESULT_EXPIRES = 14400
