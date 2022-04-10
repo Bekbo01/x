@@ -4,49 +4,60 @@ from cart.forms import CartAddProductForm
 # Create your views here.
 
 def jai(request, category_slug=None):
+    categories = Category.objects.all()
     cart_product_form = CartAddProductForm()
     return render(request,
                 'shop/base.html',
-                {'cart_product_form': cart_product_form})
+                {'cart_product_form': cart_product_form, 'categories': categories})
 
 
 def xtradecontacts(request):
-    return render(request, 'shop/xplacecontacts.html')
+    categories = Category.objects.all()
+    return render(request, 'shop/xplacecontacts.html', {'categories': categories})
 
 
 def xtradeadres(request):
-    return render(request, 'shop/xplaceadres.html')
+    categories = Category.objects.all()
+    return render(request, 'shop/xplaceadres.html', {'categories': categories})
 
 
 def remont(request):
-    return render(request, 'shop/remont.html')
+    categories = Category.objects.all()
+    return render(request, 'shop/remont.html', {'categories': categories})
 
 
 def zapisnaremont(request):
-    return render(request, 'shop/zapisnaremont.html')
+    categories = Category.objects.all()
+    return render(request, 'shop/zapisnaremont.html', {'categories': categories})
 
 
 def veloservice(request):
-    return render(request, 'shop/veloservice.html')
+    categories = Category.objects.all()
+    return render(request, 'shop/veloservice.html', {'categories': categories})
 
 
 def vyezdem(request):
-    return render(request, 'shop/vyezdem.html')
+    categories = Category.objects.all()
+    return render(request, 'shop/vyezdem.html', {'categories': categories})
 
 
 def garantya(request):
-    return render(request, 'shop/garantya.html')
+    categories = Category.objects.all()
+    return render(request, 'shop/garantya.html', {'categories': categories})
 
 
 def dostavka(request):
-    return render(request, 'shop/dostavka.html')
+    categories = Category.objects.all()
+    return render(request, 'shop/dostavka.html', {'categories': categories})
 
 def ocompany(request):
-    return render(request, 'shop/ocompany.html')
+    categories = Category.objects.all()
+    return render(request, 'shop/ocompany.html', {'categories': categories})
 
 
 def tovelobike(request):
-    return render(request, 'shop/tovelobike.html')
+    categories = Category.objects.all()
+    return render(request, 'shop/tovelobike.html', {'categories': categories})
 
 def product_list(request, category_slug=None):
     category = None
