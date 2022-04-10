@@ -179,10 +179,9 @@ CORS_ALLOW_METHODS = (
 )
 
 
+from os import environ
 
-BROKER_URL = os.environ.get("CLOUDAMQP_URL", "django://")
-BROKER_POOL_LIMIT = 1
-BROKER_CONNECTION_MAX_RETRIES = None
-
-if BROKER_URL == "django://":
-    INSTALLED_APPS += ("kombu.transport.django",)
+CELERY_RESULT_BACKEND = "amqp"
+BROKER_POOL_LIMIT = 0
+BROKER_URL = environ.get('CLOUDAMQP_URL', '')
+CELERY_TASK_RESULT_EXPIRES = 14400
