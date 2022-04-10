@@ -154,7 +154,7 @@ CORS_ALLOW_CREDENTIALS = True
 
 CORS_ORIGIN_WHITELIST = (
     'https://xtradekz.herokuapp.com',
-    'http://xtradekz.herokuapp.com',
+    'https://xtrade.herokuapp.com',
     'https://xtrade.com.kz',
     'http://xtrade.com.kz',
     'http://localhost:8080',
