@@ -27,6 +27,7 @@ DEBUG = True #config('DEBUG', 'True', cast=bool)
 ALLOWED_HOSTS = ["*",]
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'cart',
     'orders',
     'phonenumber_field',
+    'djcelery',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +54,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+import djcelery
+djcelery.setup_loader()
+
 
 ROOT_URLCONF = 'xtrade.urls'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -147,7 +153,11 @@ FORKED_BY_MULTIPROCESSING=1
 # Task async
 #CELERY_BROKER_URL = config('REDIS_URL', 'redis://localhost:6379/0', cast=str)
 #CELERY_RESULT_BACKEND = config('REDIS_URL', 'redis://localhost:6379/0', cast=str)
-
+BROKER_URL = os.environ.get("REDISCLOUD_URL", "django://")
+BROKER_TRANSPORT_OPTIONS = {
+    "max_connections": 2,
+}
+BROKER_POOL_LIMIT = None
 # corsheaders
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ALLOW_CREDENTIALS = True
@@ -170,3 +180,16 @@ CORS_ALLOW_METHODS = (
     'PUT',
     'DELETE',
 )
+
+
+
+BROKER_URL = os.environ.get("CLOUDAMQP_URL", "django://")
+BROKER_POOL_LIMIT = 1
+BROKER_CONNECTION_MAX_RETRIES = None
+
+CELERY_TASK_SERIALIZER = "json"
+CELERY_ACCEPT_CONTENT = ["json", "msgpack"]
+CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
+
+if BROKER_URL == "django://":
+    INSTALLED_APPS += ("kombu.transport.django",)
