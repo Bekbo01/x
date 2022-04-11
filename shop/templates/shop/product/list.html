@@ -57,12 +57,13 @@
                         href="{{ product.get_absolute_url }}"
                         title="{{ product.name }}"> <span class="product-more">Подробнее</span><img
                           class="normal_view"
-                          src="{% if product.image %}{{ product.image.url }}{% else %}{% static " img/no_image.png" %}{% endif %}"
-                          alt="{{ product.name }}" loading="lazy" itemprop="contentUrl"><img class="hover_view"
-                          src="{% if product.image %}{{ product.image.url }}{% else %}{% static " img/no_image.png" %}{% endif %}"
+                          src="{{ product.image }}"
+                          alt="{{ product.name }}" loading="lazy" itemprop="contentUrl">
+                        <img class="hover_view"
+                          src="{{ product.image }}"
                           alt="{{ product.name }}" loading="lazy"></a>
                       <meta itemprop="name" content="{{ product.name }}">
-                      <meta itemprop="author" content="Hube.Kz">
+                      <meta itemprop="author" content="Xtrade.com.kz">
                       <meta itemprop="description" content="">
                     </div>
                     <div class="rate_holder"> 
