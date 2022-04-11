@@ -14,7 +14,7 @@ def order_created(order_id):
         send_mail(subject,
                   message,
                   'bigboss990930@gmail.com',
-                  ['xtrade010@gmail.com']) # order.email
+                  ['xtrade010@gmail.com', 'qurmetbek.bekbolat@mail.ru']) # order.email
         return 'success'
     except Exception as ex:
         return ex
