@@ -140,12 +140,15 @@ STATICFILES_DIRS = (
 
 CART_SESSION_ID = 'cart'
 
+
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'bigboss990930@gmail.com'
-EMAIL_HOST_PASSWORD = 'beku990930@'
+EMAIL_HOST_PASSWORD = 'mxfstvatvlexmpxh'
+
 FORKED_BY_MULTIPROCESSING=1
 # Task async
 #CELERY_BROKER_URL = config('REDIS_URL', 'redis://localhost:6379/0', cast=str)
