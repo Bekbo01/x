@@ -8,7 +8,7 @@ def order_created(order_id):
     order = Order.objects.get(id=order_id)
     subject = f'Заказ номері {order.id}'
     message = f'Салем Жонгар! Жаңа заказ! \n\n Клиент: {order.first_name},\n\n' \
-            f'Адресс: {order.address}' \
+            f'Адресс: {order.address}\n\n' \
             f'Телефон {order.phone}.'
     try:
         send_mail(subject,
