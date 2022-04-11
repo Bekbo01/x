@@ -13,5 +13,5 @@ def order_created(order_id):
     mail_sent = send_mail(subject,
                         message,
                         'bigboss990930@gmail.com',
-                        ['bigboss990930@gmail.com']) # order.email
+                        ['xtrade010@gmail.com']) # order.email
     return mail_sent
