@@ -6,12 +6,15 @@ from .models import Order
 @shared_task
 def order_created(order_id):
     order = Order.objects.get(id=order_id)
-    subject = f'Order nr. {order.id}'
-    message = f'Dear {order.first_name},\n\n' \
-            f'You have successfully placed an order.' \
-            f'Your order ID is {order.id}.'
-    mail_sent = send_mail(subject,
-                        message,
-                        'bigboss990930@gmail.com',
-                        ['xtrade010@gmail.com']) # order.email
-    return mail_sent
+    subject = f'Заказ номері {order.id}'
+    message = f'Салем Жонгар! Жаңа заказ! \n\n Клиент: {order.first_name},\n\n' \
+            f'Адресс: {order.address}' \
+            f'Телефон {order.phone}.'
+    try:
+        send_mail(subject,
+                  message,
+                  'bigboss990930@gmail.com',
+                  ['xtrade010@gmail.com']) # order.email
+        return 'success'
+    except Exception as ex:
+        return ex
