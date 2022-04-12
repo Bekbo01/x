@@ -3,10 +3,11 @@ from .models import OrderItem
 from .forms import OrderCreateForm
 from cart.cart import Cart
 from .task import order_created
-
+from shop.models import Category
 
 def order_create(request):
     cart = Cart(request)
+    categories = Category.objects.all()
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
         if form.is_valid():
@@ -21,10 +22,10 @@ def order_create(request):
             order_created.delay(order.id)
             return render(request,
                         'orders/order/created.html',
-                        {'order': order})
+                        {'order': order, 'categories': categories})
     else:
         form = OrderCreateForm()
     return render(request,
                 'orders/order/create.html',
                 {'cart': cart, 
-                'form': form})
+                'form': form, 'categories': categories})
