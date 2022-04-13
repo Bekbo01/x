@@ -134,8 +134,8 @@
           </div>
           <div class="row product-tabs">
 
-            <div class="col-md-5">
-              <ul class="nav nav-tabs responsive hidden-xs hidden-sm" id="tabs-1">
+                    <div class="col-md-5">
+              <ul class="nav nav-tabs" id="tabs-1">
                 <li role="presentation" class="active">
                   <a data-toggle="tab" href="#chars" aria-expanded="true">
                     <h2>Характеристики</h2>
@@ -144,8 +144,9 @@
                     <h2>Доставка и оплата</h2>
                   </a></li>
               </ul>
-              <div class="tab-content responsive hidden-xs hidden-sm">
-                <div role="tabpanel" class="panel-collapse collapse in" aria-expanded="true" id="chars">
+
+              <div class="tab-content">
+                <div class="tab-pane active" id="chars">
                   <table class="props_t">
                     <tbody>
                       <tr>
@@ -168,7 +169,7 @@
                     </tbody>
                   </table>
                 </div>
-                <div role="tabpanel" class="panel-collapse collapse" id="delivery_tab">
+                <div class="tab-pane" id="delivery_tab">
                   <div class="delivery-data-block">
                     <div>Способ доставки:<span>курьером до двери, самовывозом с магазина</span></div>
                   </div>
@@ -211,6 +212,7 @@
               </div>
 
             </div>
+          
           </div>
         </div>
       </div>
