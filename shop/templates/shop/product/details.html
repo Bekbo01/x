@@ -145,7 +145,7 @@
                   </a></li>
               </ul>
               <div class="tab-content responsive hidden-xs hidden-sm">
-                <div role="tabpanel" class="fade active in tab-pane" id="chars">
+                <div role="tabpanel" class="panel-collapse collapse in" aria-expanded="true" id="chars">
                   <table class="props_t">
                     <tbody>
                       <tr>
@@ -168,7 +168,7 @@
                     </tbody>
                   </table>
                 </div>
-                <div role="tabpanel" class="fade tab-pane" id="delivery_tab">
+                <div role="tabpanel" class="panel-collapse collapse" id="delivery_tab">
                   <div class="delivery-data-block">
                     <div>Способ доставки:<span>курьером до двери, самовывозом с магазина</span></div>
                   </div>
@@ -210,88 +210,6 @@
                 </div>
               </div>
 
-              <div class="panel-group responsive visible-xs visible-sm" id="collapse-tabs-1">
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse"
-                        data-parent="#collapse-tabs-1" href="#collapse-chars" aria-expanded="true">
-                        <h2>Характеристики</h2>
-                      </a></h4>
-                  </div>
-                  <div id="collapse-chars" class="panel-collapse collapse in" aria-expanded="true">
-                    <table class="props_t">
-                      <tbody>
-                        <tr>
-                          <td class="prop_title"> <span>Производитель</span> </td>
-                          <td class="prop_value text-right"> <span>
-                              <a>{{ product.producer }}</a></span> </td>
-                        </tr>
-                        <tr>
-                          <td class="prop_title"> <span>возрастная группа </span> </td>
-                          <td class="prop_value text-right"> <span>{{ product.age_group }} <small></small></span> </td>
-                        </tr>
-                        <tr>
-                          <td class="prop_title"> <span>размер рамы</span> </td>
-                          <td class="prop_value text-right"> <span>{{ product.razmer }} <small></small></span> </td>
-                        </tr>
-                        <tr>
-                          <td class="prop_title"> <span>цвет</span> </td>
-                          <td class="prop_value text-right"> <span>{{ product.color }} <small></small></span> </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse"
-                        data-parent="#collapse-tabs-1" href="#collapse-delivery_tab">
-                        <h2>Доставка и оплата</h2>
-                      </a></h4>
-                  </div>
-                  <div id="collapse-delivery_tab" class="panel-collapse collapse">
-
-                    <div class="delivery-data-block">
-                      <div>Способ доставки:<span>курьером до двери, самовывозом с магазина</span></div>
-                    </div>
-                    <div class="del-flex">
-                      <div>
-                        <div class="benefit_icon warranty"> <img src="{% static "scripts/truck.png" %}">
-                        </div>
-                      </div>
-                      <div class="benefit_info warranty">
-                        <div class="benefit_title warranty"> Оперативная доставка </div>
-                        <div class="benefit_description warranty"> доставим в течении 2-3 часов с момента заказа
-                          выбранный
-                          товар, прямо до двери (для городов Алматы и Астана). </div>
-                      </div>
-                    </div>
-                    <div class="del-flex">
-                      <div>
-                        <div class="benefit_icon warranty"> <img src="{% static "scripts/calendar.png" %}">
-                        </div>
-                      </div>
-                      <div class="benefit_info warranty">
-                        <div class="benefit_title warranty"> Рассрочка на 3 мес </div>
-                        <div class="benefit_description warranty"> честная рассрочка на 3 месяца, без % и
-                          первоначального
-                          взноса. </div>
-                      </div>
-                    </div>
-                    <div class="del-flex">
-                      <div>
-                        <div class="benefit_icon warranty"> <img src="{% static "scripts/card.png" %}">
-                        </div>
-                      </div>
-                      <div class="benefit_info warranty">
-                        <div class="benefit_title warranty"> Два способа оплаты </div>
-                        <div class="benefit_description warranty"> оплата наличными курьеру при получении товара или
-                          банковской картой через наш сайт. </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
